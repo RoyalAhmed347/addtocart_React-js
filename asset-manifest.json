@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/addtocart_React-js/static/css/main.0b445ee2.css",
+    "main.js": "/addtocart_React-js/static/js/main.477ece02.js",
+    "index.html": "/addtocart_React-js/index.html",
+    "main.0b445ee2.css.map": "/addtocart_React-js/static/css/main.0b445ee2.css.map",
+    "main.477ece02.js.map": "/addtocart_React-js/static/js/main.477ece02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b445ee2.css",
+    "static/js/main.477ece02.js"
+  ]
+}
