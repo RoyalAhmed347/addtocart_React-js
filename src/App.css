@@ -98,7 +98,7 @@ header .brandName h2 {
 .cart_main {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -1000%;
   height: 100%;
   background-color: #daa520;
   width: 40rem;
@@ -135,15 +135,27 @@ header .brandName h2 {
 }
 .cart_item_contener {
   width: 100%;
+  height: 75%;
   /* background-color: #fff; */
   padding: 1rem;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+  overflow: scroll;
 }
+.cart_item_contener::-webkit-scrollbar {
+  width: 10px;
+}
+.cart_item_contener::-webkit-scrollbar-track {
+  background-color: #daa520;
+}
+.cart_item_contener::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 .cart_item {
   width: 100%;
   background-color: #fff;
@@ -272,5 +284,14 @@ footer {
   .shop_contener .item {
     width: 37rem;
     justify-content: center;
+  }
+  .cart_main {
+    width: 100%;
+  }
+  .cart_item_contener {
+    width: 100%;
+  }
+  .cart_item {
+    width: 100%;
   }
 }

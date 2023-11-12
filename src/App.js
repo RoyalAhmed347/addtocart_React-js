@@ -3,11 +3,7 @@ import "./App.css";
 import { FaWindowClose } from "react-icons/fa";
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 
-// import Header from "./Compunent/Header";
-// import Shop from "./Compunent/Shop";
 import Products from "./Api/Products";
-// import Footer from "./Compunent/Footer";
-// import Cart from "./Cart";
 const App = () => {
   const [items, setitems] = useState(Products);
 
@@ -22,14 +18,23 @@ const App = () => {
   }
 
   function addCartItem(item) {
-    settotalAmount(totalAmount + item.price * item.quantity);
-    return setcartItems((prevData) => {
-      return [...prevData, item];
+    setshowCart(true);
+    const checkobj = cartItems.find((elem) => {
+      return elem.id === item.id;
     });
+
+    console.log(checkobj);
+    if (checkobj === undefined) {
+      return setcartItems((prevData) => {
+        return [...prevData, item];
+      });
+    } else {
+      return setcartItems((prevData) => {
+        return [...prevData];
+      });
+    }
   }
   function removeCratItem(item) {
-    settotalAmount(totalAmount - item.price * item.quantity);
-
     setcartItems((prvData) => {
       return prvData.filter((elem) => {
         return elem.id !== item.id;

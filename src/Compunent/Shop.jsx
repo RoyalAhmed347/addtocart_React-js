@@ -4,10 +4,10 @@
 //   return (
 //     <>
 //       <div className="shop_contener">
-//         {items.map((elem) => {
+//         {items.map((elem, index) => {
 //           return (
 //             <>
-//               <div className="item">
+//               <div className="item" key={index}>
 //                 <img src={elem.img} alt="item" />
 //                 <div className="info">
 //                   <h2>{elem.title}</h2>
@@ -19,7 +19,14 @@
 //                       {elem.price}
 //                     </span>
 //                   </p>
-//                   <button className="cart_btn" >Add To Cart</button>
+//                   <button
+//                     className="cart_btn"
+//                     onClick={() => {
+//                       addCartItem(elem);
+//                     }}
+//                   >
+//                     Add To Cart
+//                   </button>
 //                 </div>
 //               </div>
 //             </>

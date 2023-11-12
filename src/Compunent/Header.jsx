@@ -7,9 +7,9 @@
 //       <div className="brandName">
 //         <h2>Royal Shop</h2>
 //       </div>
-//       <div className="cart_mian">
+//       <div className="cart_mian" onClick={() => cartShow()}>
 //         <AiOutlineShoppingCart className="cartIcon" />
-//         <p className="totla_cart-items">0</p>
+//         <p className="totla_cart-items">{cartItems.length}</p>
 //       </div>
 //     </header>
 //   );
